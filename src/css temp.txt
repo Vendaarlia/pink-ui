@@ -1,0 +1,59 @@
+:root{
+    --black: #0a0809;
+    --ijo: #c9f422;
+    --pink: #ed89fb;
+    --crem: #c9d1f5;
+
+    --pro: "Tac One", sans-serif;
+    --txt: "Roboto", sans-serif;
+    --cad: monospace;
+
+
+    --clamp-big: clamp(3rem, 15vw, 12rem);
+    --clamp-med: clamp(4rem, 10vw, 8rem);
+    --clamp-sub: clamp(2.7rem, 5vw, 6rem);
+    --clamp-txt: clamp(0.7rem, 1.2vw, 1rem);
+    --clamp-btn: clamp(0.8rem, 2.2vw, 1.3rem);
+}
+
+body {
+    background-color: var(--black);
+    color: var(--crem);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--txt);
+}
+
+a {
+    font-size: var(--clamp-btn);
+    font-family: var(--txt);
+    color: var(--pink);
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: var(--pro);
+    font-size: var(--clamp-sub);
+    line-height: 65%;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    font-size: var(--clamp-sub);
+    font-family: var(--pro);
+    line-height: 70%;
+    font-weight: 100;
+}
+
+p {
+    margin: 0;
+    line-height: 120%;
+    font-size: var(--clamp-txt);
+    font-family: var(--txt);
+}
+li {
+    list-style: none;
+}
