@@ -14,6 +14,6 @@ export const Default = Template.bind({});
 Default.args = {
   title: 'Hero Title',
   subtitle: 'Hero Subtitle',
-  imageSrc: '/public/guild.PNG',
+  imageSrc: '/guild.PNG',
   description: 'This is the subhero description.',
 };
