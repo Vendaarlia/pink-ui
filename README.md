@@ -15,7 +15,7 @@ Welcome to **Pink UI**, a design system inspired by the vibrant and bold color p
 
 ## Introduction
 
-Pink UI is a collection of React components designed to streamline the process of building user interfaces. With a focus on a playful and energetic pink theme, these components are perfect for creating visually appealing and cohesive designs.
+Pink UI is a collection of React components designed to streamline the process of building user interfaces. With a focus on a playful and energetic pink theme, these components are personal project that I want to speed up my prototyping in unusual way of looking creative or none practical way.
 
 ## Features
 
@@ -71,7 +71,7 @@ export default App;
 
 ## Contributing
 
-We welcome contributions to Pink UI! If you have ideas for new features or improvements, please open an issue or submit a pull request.
+I'm welcome to new ideas for new features, improvements, or criticism. because I'm just a self-taught developer,  please open an issue for discuss.
 
 ## License
 
