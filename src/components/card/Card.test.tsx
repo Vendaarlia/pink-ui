@@ -1,19 +1,43 @@
+// Card.test.tsx
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Card from './Card';
 
-test('renders Card component with provided props', () => {
-    render(
-        <Card
-        title="Card"
-        textOne="This card test"
-        textTwo="This need to render"
-        imageSrc="image.png"
-        />
-    );
+describe('Card Component', () => {
+  const props = {
+    title: 'Card Title',
+    textOne: 'This is the first text',
+    textTwo: 'This is the second text',
+    imageSrc: 'https://via.placeholder.com/150',
+  };
 
-    expect(screen.getByText('Card')).toBeInTheDocument();
-    expect(screen.getByText('This card test')).toBeInTheDocument();
-    expect(screen.getByText('This need to render')).toBeInTheDocument();
-    expect(screen.getByAltText('Card Image')).toHaveAttribute('src', 'image.png');
+  test('renders Card component', () => {
+    render(<Card {...props} />);
+    expect(screen.getByText(props.title)).toBeInTheDocument();
+    expect(screen.getByText(props.textOne)).toBeInTheDocument();
+    expect(screen.getByText(props.textTwo)).toBeInTheDocument();
+    expect(screen.getByAltText('card')).toBeInTheDocument();
+  });
 
-})
+  test('renders image with correct src and alt', () => {
+    render(<Card {...props} />);
+    const image = screen.getByAltText('card');
+    expect(image).toHaveAttribute('src', props.imageSrc);
+  });
+
+  test('renders title correctly', () => {
+    render(<Card {...props} />);
+    expect(screen.getByText(props.title)).toBeInTheDocument();
+  });
+
+  test('renders textOne correctly', () => {
+    render(<Card {...props} />);
+    expect(screen.getByText(props.textOne)).toBeInTheDocument();
+  });
+
+  test('renders textTwo correctly', () => {
+    render(<Card {...props} />);
+    expect(screen.getByText(props.textTwo)).toBeInTheDocument();
+  });
+});

@@ -10,14 +10,20 @@ type AlertProps = {
 const Alert: React.FC<AlertProps> = ({ message, type = 'normal', onClose }) => {
   return (
     <div className={`${styles.alert} ${styles[type]}`}>
-      <span>{message}</span>
+      <div>{message}</div>
       {onClose && (
-        <button className={styles.closeButton} onClick={onClose}>
-          &times;
-        </button>
-      )}
+          <button className={styles.closeButton} onClick={onClose}>
+            &times;
+          </button>
+        )}
     </div>
   );
 };
 
 export default Alert;
+
+/**
+      <div>
+        
+      </div>
+*/

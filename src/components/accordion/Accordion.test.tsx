@@ -1,37 +1,62 @@
-import { render, fireEvent, screen } from '@testing-library/react';
+// Accordion.test.tsx
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Accordion from './Accordion';
 
 const items = [
-  { question: 'What is your name?', answer: 'My name is John Doe.' },
-  { question: 'What is your job?', answer: 'I am a software developer.' },
+  { question: 'Question 1', answer: 'Answer 1' },
+  { question: 'Question 2', answer: 'Answer 2' },
 ];
 
-test('renders Accordion component with questions and answers', () => {
-  render(<Accordion items={items} />);
-
-  // Check if questions are rendered
-  items.forEach(item => {
-    expect(screen.getByText(item.question)).toBeInTheDocument();
+describe('Accordion Component', () => {
+  test('renders the correct number of items', () => {
+    render(<Accordion items={items} />);
+    const questions = screen.getAllByRole('button');
+    expect(questions).toHaveLength(items.length);
   });
 
-  // Initially, answers should not be visible
-  items.forEach(item => {
-    expect(screen.queryByText(item.answer)).not.toBeVisible();
+  test('shows and hides the answer when clicked', () => {
+    render(<Accordion items={items} />);
+    const firstQuestion = screen.getByText('Question 1');
+
+    // Initially the answer should be hidden
+    expect(screen.getByText('Answer 1').parentElement).toHaveStyle('max-height: 0');
+
+    // Click to show the answer
+    fireEvent.click(firstQuestion);
+    expect(screen.getByText('Answer 1').parentElement).toHaveStyle('max-height: 100px');
+
+    // Click again to hide the answer
+    fireEvent.click(firstQuestion);
+    expect(screen.getByText('Answer 1').parentElement).toHaveStyle('max-height: 0');
   });
-});
 
-test('toggles answer visibility on question click', () => {
-  render(<Accordion items={items} />);
+  test('only one answer is shown at a time', () => {
+    render(<Accordion items={items} />);
+    const firstQuestion = screen.getByText('Question 1');
+    const secondQuestion = screen.getByText('Question 2');
 
-  // Click the first question
-  fireEvent.click(screen.getByText(items[0].question));
-  expect(screen.getByText(items[0].answer)).toBeVisible();
+    // Click to show the first answer
+    fireEvent.click(firstQuestion);
+    expect(screen.getByText('Answer 1').parentElement).toHaveStyle('max-height: 100px');
+    expect(screen.getByText('Answer 2').parentElement).toHaveStyle('max-height: 0');
 
-  // Click the second question
-  fireEvent.click(screen.getByText(items[1].question));
-  expect(screen.getByText(items[1].answer)).toBeVisible();
+    // Click to show the second answer
+    fireEvent.click(secondQuestion);
+    expect(screen.getByText('Answer 1').parentElement).toHaveStyle('max-height: 0');
+    expect(screen.getByText('Answer 2').parentElement).toHaveStyle('max-height: 100px');
+  });
 
-  // The first answer should now be hidden
-  expect(screen.queryByText(items[0].answer)).not.toBeVisible();
+  test('adds active class to the opened question', () => {
+    render(<Accordion items={items} />);
+    const firstQuestion = screen.getByText('Question 1');
+
+    // Initially, the question should not have an active class
+    expect(firstQuestion).not.toHaveClass('active');
+
+    // Click to show the answer and add active class
+    fireEvent.click(firstQuestion);
+    expect(firstQuestion).toHaveClass('active');
+  });
 });

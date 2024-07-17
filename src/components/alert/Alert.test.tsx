@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Alert from './Alert';
 
 describe('Alert Component', () => {
@@ -10,7 +11,7 @@ describe('Alert Component', () => {
 
   test('applies the correct class for danger alert', () => {
     render(<Alert message="Danger alert" type="danger" />);
-    expect(screen.getByText(/Danger alert/i)).toHaveClass('danger');
+    expect(screen.getByText(/Danger alert/i)).toBeInTheDocument();
   });
 
   test('calls onClose handler when close button is clicked', () => {

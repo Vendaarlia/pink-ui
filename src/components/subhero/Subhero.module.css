@@ -32,6 +32,7 @@ h3 {
 
 p {
     margin: 0;
+    color: var(--black);
     line-height: 120%;
     font-size: var(--clamp-txt);
     font-family: var(--roboto);
@@ -43,26 +44,31 @@ p {
 
 }
 
-.subHero h3 {
+.subHero div {
     position: relative;
-    top: 0;
-    left: 0;
     color: var(--pink);
     display: flex;
 }
 
-.subHero h3 span {
-    color: var(--ijo);
+.subHero div div {
+    display: flex;
+    flex-direction: column;
 }
 
-.subHero h3 img {
+.subHero h3 {
+    color: var(--ijo);
+    margin: 0;
+}
+
+.subHero div img {
     width: 50px;
 }
 
-.txtSub p {
-    margin-top: 5%;
+.txtSub {
+    margin-top: 1%;
     padding: 5%;
     background-color: var(--ijo);
     color: var(--black);
     border-radius: 5px;
 }
+

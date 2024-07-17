@@ -1,4 +1,6 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Subhero from './Subhero';
 
 test('renders Subhero component with provided props', () => {

@@ -39,6 +39,11 @@ p {
   font-family: var(--roboto);
   color: var(--crem);
 }
+
+.card {
+  max-width: 500px;
+}
+
 .imgContainer {
   background-color: var(--pink);
   padding: 10%;

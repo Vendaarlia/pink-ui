@@ -14,13 +14,13 @@ const Subhero: React.FC<SubheroProps> = ({ title, subtitle, imageSrc, descriptio
 
   return (
     <div className={styles.subHero}>
-      <h3>
-        <span><img src={imageSrc} alt="Subhero Image" /></span><br />
-        <span>
-            <span>{getTitleContent()}</span><br />
-            <span>{getSubtitleContent()}</span>
-        </span>
-      </h3>
+      <div>
+        <div><img src={imageSrc} alt="Subhero Image" /></div>
+        <div>
+            <h3>{getTitleContent()}</h3>
+            <h3>{getSubtitleContent()}</h3>
+        </div>
+      </div>
       <div className={styles.txtSub}>
         <p>{getDescriptionContent()}</p>
       </div>
