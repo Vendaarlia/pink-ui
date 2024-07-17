@@ -30,13 +30,6 @@ h3 {
     font-weight: 100;
 }
 
-p {
-    margin: 0;
-    color: var(--black);
-    line-height: 120%;
-    font-size: var(--clamp-txt);
-    font-family: var(--roboto);
-}
 
 .subHero {
     padding: 0 5%;
@@ -70,5 +63,13 @@ p {
     background-color: var(--ijo);
     color: var(--black);
     border-radius: 5px;
+}
+
+.txtSub p {
+    margin: 0;
+    color: var(--black);
+    line-height: 120%;
+    font-size: var(--clamp-txt);
+    font-family: var(--roboto);
 }
 

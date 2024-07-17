@@ -32,7 +32,7 @@ const AlertWithTimer: React.FC<AlertWithTimerProps> = ({
   return (
     <div className={styles.grouper}>
       <div className={`${styles.alert} ${styles[type]}`}>
-        <span>{message}</span>
+        <div>{message}</div>
       </div>
       <div className={styles.timerContainer}>
         <div className={`${styles.timerLine} ${styles[type]}`} style={{ animationDuration: `${duration}ms` }}></div>

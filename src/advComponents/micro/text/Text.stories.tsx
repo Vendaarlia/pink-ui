@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryFn } from '@storybook/react';
-import Text from ".";
-import textProps from '.';
+import Text from "./Text";
+import textProps from './Text';
 
 export default {
     title: 'Advance Components/Text',
