@@ -43,13 +43,13 @@ describe('Combobox Component', () => {
 
   test('applies light theme by default', () => {
     render(<Combobox suggestions={suggestions} onSelect={onSelect} />);
-    const input = screen.getByPlaceholderText('');
+    const input = screen.getByPlaceholderText('light');
     expect(input).toHaveClass('light');
   });
 
   test('applies dark theme when specified', () => {
     render(<Combobox suggestions={suggestions} onSelect={onSelect} theme="dark" />);
-    const input = screen.getByPlaceholderText('');
+    const input = screen.getByPlaceholderText('dark');
     expect(input).toHaveClass('dark');
   });
 });
