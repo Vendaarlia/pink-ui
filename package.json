@@ -45,6 +45,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.1.6",
+    "storybook-dark-mode": "^4.0.2",
     "tslib": "^2.6.3",
     "typescript": "^5.4.5"
   },
