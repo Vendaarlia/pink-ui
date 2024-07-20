@@ -1,39 +1,65 @@
 import { Meta } from "@storybook/blocks";
 
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
+export const RightArrow = () => (
+  <svg
+    viewBox="0 0 14 14"
+    width="8px"
+    height="14px"
+    style={{
+      marginLeft: "4px",
+      display: "inline-block",
+      shapeRendering: "inherit",
+      verticalAlign: "middle",
+      fill: "currentColor",
+      "path fill": "currentColor",
     }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
+  >
+    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+  </svg>
+);
 
 <Meta title="Configure your project" />
 
 <div className="sb-container">
   <div className='sb-section-title'>
-   # Pink UI
 
-Welcome to **Pink UI**, a design system inspired by the vibrant and bold color palette of pink. This project aims to provide a set of reusable and customizable React components to help developers build modern and consistent user interfaces with ease.
+# Pink UI
+
+Welcome to **Pink UI**, a design system inspired by the vibrant and bold color palette of pink. This project aims to provide a set of reusable and customizable React components to speed up my work with ready to use component that ease to customizing.
   </div>
   
   <div className="sb-section">
     <div className="sb-section-item">
-      ## Introduction
+
+## Introduction
 
 Pink UI is a collection of React components designed to streamline the process of building user interfaces. With a focus on a playful and energetic pink theme, these components are personal project that I want to speed up my prototyping in unusual way of looking creative or none practical way.
+
     </div>
+  </div>
+</div>
+
+<div className="sb-section">
+  <div className="sb-section-item">
+
+## Stories the components
+
+### Components Section
+On the Component Section is component that I learned to build with help from my mentor. I'm learning how to making components, remember anatomy that components, and learning the basic working components. I want component that is customizable the look and the purpose so basically I want cheat code library so I can't build component fast and skip wondering around to build component. That reliable on every need and condition.
+
+
+### Advance Components
+for the Advance Component i want to experiment and learning how to making simple component that can be combine or integrated with other components.
+
+#### micro
+this folder is contain basic components that use to build complex component or asosiated components
+
+#### bundle
+this folder is contain collection of component that construct solid components that ready for use in specifict need.
 
   </div>
 </div>
+
   <div className="sb-section">
     <div className="sb-features-grid">
       <div className="sb-grid-item">
@@ -42,17 +68,17 @@ Pink UI is a collection of React components designed to streamline the process o
 To use the components in your React project, simply import them as needed:
 
 ```jsx
-import React from 'react';
-import { Button, Input } from 'pink-ui';
+import React from "react";
+import { Button, Input } from "pink-ui";
 
 const App = () => {
   return (
-    <div>
-      <Button label="Click Me" />
-      <Input placeholder="Enter text" />
-    </div>
-  );
-};
+      <div>
+        <Button label="Click Me" />
+        <Input placeholder="Enter text" />
+      </div>
+    );
+  };
 
 export default App;
 ```
@@ -64,9 +90,9 @@ export default App;
 All components in Pink UI are designed to be easily customizable. You can override the default styles using CSS or styled-components. Here’s an example of customizing the Button component:
 
 ```jsx
-import React from 'react';
-import { Button } from 'pink-ui';
-import styled from 'styled-components';
+import React from "react";
+import { Button } from "pink-ui";
+import styled from "styled-components";
 
 const CustomButton = styled(Button)`
   background-color: #ff69b4;
@@ -83,21 +109,23 @@ const App = () => {
 
 export default App;
 ```
+
       </div>
 
 
       <div className="sb-grid-item">
         ## Contributing
 
-I'm welcome to new ideas for new features, improvements, or criticism. because I'm just a self-taught developer,  please [open an issue](https://github.com/Vendaarlia/pink-ui) for discuss.
-      </div>
+I'm welcome to new ideas for new features, improvements, or criticism. because I'm just a self-taught developer, please [open an issue](https://github.com/Vendaarlia/pink-ui) for discuss.
+</div>
 
       <div className="sb-grid-item">
         ## License
 
 Pink UI is licensed under the MIT License. See the [LICENSE](https://github.com/Vendaarlia/pink-ui/blob/main/LICENSE) file for more information.
-      </div>
-    </div>
+</div>
+</div>
+
   </div>
 
 <style>

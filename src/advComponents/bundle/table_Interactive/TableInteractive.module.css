@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Tac+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --black: #0a0809;
+  --white: #FBFBFB;
+  --ijo: #c9f422;
+  --ijo-dark: #b1da0b;
+  --pink: #ed89fb;
+  --pink-dark: #e96bfa;
+  --crem: #c9d1f5;
+
+  --clamp-big: clamp(3rem, 20vw, 20rem);
+  --clamp-med: clamp(4rem, 10vw, 8rem);
+  --clamp-sub: clamp(2.7rem, 5vw, 6rem);
+  --clamp-txt: clamp(0.7rem, 1.2vw, 1rem);
+  --clamp-btn: clamp(0.8rem, 1vw, 1rem);
+
+  --unicone: "Tac One", sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+/* TableIntractive */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.container h1, .container p {
+  color: var(--crem);
+}
+
+.container h1 {
+  font-size: var(--clamp-sub);
+  margin: 0;
+}
+
+.container p {
+  font-size: var(--clamp-txt);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--crem);
+  border-radius: 20px;
+}
+
+
+
+/* RowTable */
+.row {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--pink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.iconArrow svg {
+  transform: rotate(90deg);
+}
+
+.row:hover .iconArrow svg {
+  transform: rotate(135deg);
+}
+
+.imgHident {
+  display: none;
+  width: 20%;
+  position: absolute;
+  right: 15%;
+  z-index: 0;
+  transform: rotate(25deg);
+}
+
+.row:hover .imgHident {
+  display: block;
+  z-index: 1;
+}
+
+.listData {
+  width: 60%;
+  color: var(--crem);
+  font-family: var(--roboto);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.name {
+  font-size: 0.9rem;
+}
+
+.tags {
+  font-size: 0.5rem;
+  border: 1px solid var(--pink);
+  border-radius: 20px;
+  padding: 3px 6px;
+}
+
+
+.price {
+  font-size: 0.7rem;
+}

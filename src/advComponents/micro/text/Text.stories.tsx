@@ -4,7 +4,7 @@ import Text from "./Text";
 import textProps from './Text';
 
 export default {
-    title: 'Advance Components/Text',
+    title: 'Advance Components/micro/Text',
     component: Text,
 } as Meta;
 

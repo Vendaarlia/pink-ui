@@ -6,7 +6,7 @@ import ImageProps from './Image';
 
 
 export default {
-  title: 'Advance Components/Image',
+  title: 'Advance Components/micro/Image',
   component: Image,
 } as Meta;
 

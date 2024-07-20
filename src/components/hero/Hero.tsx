@@ -19,6 +19,9 @@ const Hero: React.FC<HeroProps> = ({ title, imageUrl }) => {
       <div className={styles.imageContainer}>
         <img src={imageUrl} alt="Hero" className={styles.image} />
       </div>
+      <div className="subtitle">
+        <p>Ready to Raid the Online Dungeon with Guild Master</p>
+      </div>
     </section>
   );
 };
