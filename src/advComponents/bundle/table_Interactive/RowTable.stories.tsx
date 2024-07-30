@@ -5,7 +5,7 @@ import RowTable from './RowTable';
 import RowTableProps from './RowTable';
 
 export default {
-  title: 'Advance Components/bundle/RowTable',
+  title: 'Advance Components/bundle/table_Interactive/RowTable',
   component: RowTable,
 } as Meta;
 
