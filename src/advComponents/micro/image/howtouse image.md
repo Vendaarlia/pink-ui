@@ -20,6 +20,7 @@ const App: React.FC = () => {
         width={300}
         height={300}
         fallbackSrc="https://via.placeholder.com/300"
+        classNamae="csStyles"
       />
     </div>
   );

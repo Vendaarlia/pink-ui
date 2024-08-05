@@ -4,7 +4,7 @@ import styles from './Image.module.css';
 interface imageProps {
     src: string;
     alt: string;
-    styling: string;
+    className: string;
     width?: number | string;
     height?: number | string;
     lazyLoad?: boolean;
@@ -17,7 +17,7 @@ interface imageProps {
 const Image: React.FC<imageProps> = ({
     src,
     alt,
-    styling,
+    className, //can't use classname the syntax if work : className={`${styles.image} ${loaded ? styles.loaded : ''} ${className}`}
     width,
     height,
     lazyLoad = false,
@@ -48,7 +48,7 @@ const Image: React.FC<imageProps> = ({
             <img
             src={error && fallbackSrc ? fallbackSrc : src}
             alt={alt}
-            className={`${styles.image} ${loaded ? styles.loaded : ''} ${styles.styling}`}
+            className={`${styles.image} ${loaded ? styles.loaded : ''}`}
             loading={lazyLoad ? 'lazy' : 'eager'}
             onLoad={handleLoad}
             onError={handleError}

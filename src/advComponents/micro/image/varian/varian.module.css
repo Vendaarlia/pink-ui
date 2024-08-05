@@ -1,0 +1,22 @@
+
+.imgDungeon {
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    border-radius: 300px 300px 0 0;
+}
+.gifDungeon {
+    width: 200%;
+    display: block;
+}
+.imgDungeon:hover .gifDungeon {
+    display: none;
+
+}
